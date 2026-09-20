@@ -18,15 +18,27 @@ botao_adicionar_produto.addEventListener("click", function(){
     if (!nome_produto.trim()) {
         alert("Preencha o nome do produto");
         return;
-        elseif (preço_produto.trim())
+    }
+    if (!preço_produto.trim()) {
         alert("Preencha o preço do produto");
         return;
-}
+    }
+
+    const preço_produto_numero = parseFloat(preço_produto.replace(/[^\d,-]/g, "").replace(".", "").replace(",", ".")) / 100;
+    const qtd_produto_numero = parseFloat(qtd_produto);
 
     const nova_div = document.createElement("div")
+    nova_div.classList.add("nova_div_produto");
     const produto = document.createElement("p")
+    produto.classList.add("infoproduto");
     const preço = document.createElement("p")
+    preço.classList.add("infoproduto");
     const qtd = document.createElement("p")
+    qtd.classList.add("infoproduto");
+
+    produto.textContent = nome_produto;
+    preço.textContent = `Preço: R$ ${preço_produto_numero.toFixed(2)}`;
+    qtd.textContent = `Quantidade: ${qtd_produto_numero}`;
     nova_div.append(produto,preço,qtd)
     lista_de_compras.appendChild(nova_div)
 })

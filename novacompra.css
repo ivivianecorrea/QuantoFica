@@ -151,9 +151,6 @@ header{
 
 
 #div_finalizar_compra{
-    position: fixed;
-    right: 20px;
-    left: 20px;
     display: flex;
     flex-direction: column;
     border-style: solid;
@@ -199,4 +196,19 @@ header{
     background-color: #128F66;
     color: #ffffff;
     cursor: pointer;
+}
+
+
+
+.nova_div_produto{
+    background-color: #edebeb;
+    padding: 15px;
+    font-family: Poppins-bold;
+    font-size: 12px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.infoproduto{
+    margin: 0px;
+    font-family: Poppins-Regular;
 }
