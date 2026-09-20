@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="novacompra.css">
+    <title>Quanto Fica? - Nova Compra</title>
+</head>
+<body>
+    <header id="div_header">
+        <div id="icone_inteiro">
+            <div id="fundo_icone">
+                <img id="logo_cesta" src="imagens/logo_cesta.svg">
+            </div>
+        </div>
+        
+        <p id="quantofica_titulo">Quanto Fica?</p>
+    </header>
+
+
+
+    <div id="menu_novacompra">
+        <div class="menu_esquerdo">
+            <svg id="icon_voltar" class="menu_esquerdo" width="20" height="18" viewBox="0 0 20 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 4.99906H12V0.999064C11.9991 0.810495 11.9451 0.625998 11.8441 0.466702C11.7432 0.307405 11.5995 0.179749 11.4294 0.0983518C11.2593 0.0169545 11.0697 -0.0148932 10.8823 0.00645551C10.695 0.0278042 10.5174 0.101486 10.37 0.219064L0.38 8.21906C0.14 8.40906 0 8.69906 0 8.99906C0 9.29906 0.14 9.58906 0.38 9.77906L10.38 17.7791C10.56 17.9191 10.78 17.9991 11 17.9991C11.15 17.9991 11.3 17.9691 11.43 17.8991C11.78 17.7291 12 17.3791 12 16.9991V12.9991H19C19.55 12.9991 20 12.5491 20 11.9991V5.99906C20 5.44906 19.55 4.99906 19 4.99906Z" fill="currentColor"/>
+            </svg>
+            <p class="menu_esquerdo">VOLTAR</p>
+        </div>
+
+        <div class="menu_direito">
+            <svg id="icon_compartilhar" class="menu_direito" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.632734 7.80464L8.674 11.3221L12.1894 19.3681C12.3578 19.7578 12.7367 20 13.1577 20H13.2104C13.4232 19.9891 13.6278 19.9138 13.7969 19.784C13.966 19.6543 14.0918 19.4762 14.1576 19.2733L19.9465 1.36996C20.0077 1.1866 20.0166 0.989809 19.9722 0.801661C19.9279 0.613513 19.832 0.441446 19.6954 0.304756C19.5588 0.168066 19.3868 0.0721564 19.1988 0.0277833C19.0108 -0.0165897 18.8141 -0.00767203 18.6308 0.0535364L0.727461 5.83527C0.306453 5.97218 0.0222722 6.35131 0.00122173 6.7831C-0.0198287 7.21489 0.232776 7.62561 0.632734 7.80464Z" fill="currentColor"/>
+            </svg>
+            <p class="menu_direito">COMPARTILHAR</p>
+        </div>
+    </div>
+
+
+
+    <div id="div_conteudo">
+        <div id="info_novacompra">
+            <p>NOME DA COMPRA</p>
+            <input id="nome_compra" class="input" type="text" value="Nova Compra">
+            <p class="info_novacompra" >DATA</p>
+            <input id="data_compra" class="input" type="date">
+            <P class="info_novacompra" >ORÇAMENTO(LIMITE)</P>
+            <input id="orçamento_compra" class="input" type="number" placeholder="Opcional">
+        </div>
+
+
+        <div id="info_produto">
+            <p>PRODUTO</p>
+            <input id="nome_produto" class="input" type="text" placeholder="Ex.: Arroz">
+            <p class="info_produto">PREÇO</p>
+            <input id="preço_produto" class="input" type="number" value="R$" placeholder="R$ 0,00">
+            <P class="info_produto">QUANTIDADE</P>
+            <input id="qtd_produto" class="input" type="number" value="1">
+            <input id="botao_adicionar_produto" type="button" value="+ Adicionar">
+        </div>
+    </div>
+
+
+        <div id="lista_produtos">
+            <h1>Lista de Produtos</h1>
+            <div id="lista_de_compras">
+            </div>
+        </div>
+
+
+
+    <div id="div_finalizar_compra">
+        <div id="txt_finalizar_compra">
+            <p>ITENS</p>
+            <p>TOTAL</p>
+        </div>
+        <div id="valores_finalizar_compra">
+            <p></p>
+            <p></p>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 0C4.49 0 0 4.49 0 10C0 15.51 4.49 20 10 20C15.51 20 20 15.51 20 10C20 4.49 15.51 0 10 0ZM8.71 13.71C8.51 13.91 8.26 14 8 14C7.74 14 7.49 13.9 7.29 13.71L4.29 10.71L5.7 9.3L7.99 11.59L13.28 6.3L14.69 7.71L8.69 13.71H8.71Z" fill="white"/>
+        </svg>
+        <input id="botao_finalizar_compra" type="button" value="Finalizar Compra" >
+    </div>
+
+
+
+<script src="novacompra.js"></script>
+</body>
+</html>

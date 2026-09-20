@@ -1,0 +1,93 @@
+@font-face {
+    font-family: Poppins-ExtraBold;
+    src: url(fontes/Poppins/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(fontes/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins-bold;
+    src: url(fontes/Poppins/Poppins-Bold.ttf);
+}
+body{
+    background-color: #ffffff;
+    padding: 0px 15px 15px 15px;
+}
+header{
+    display: flex;
+    align-items: center;
+}
+#div_header{
+    display: flex;
+    border-style: solid;
+    border-color: #d6d6d6;
+    border-width: 0px 0px 2px 0px;
+    height: 30px;
+    width: auto;
+    margin: -10px -15px auto -15px ;
+    padding: 25px;
+}
+#fundo_icone{
+    background-color: #14B982;
+    width: 45px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+}
+#quantofica_titulo{
+    margin-left: 15px;
+    font-family: Poppins-bold;
+    font-size: 18px;
+}
+
+
+#div_novacompra{
+    background-color: #14B982;
+    border-radius: 25px;
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 20px;
+    color: #0a6c63;
+    font-family: Poppins-Regular;
+    font-size: 11px;
+    gap: 10px;
+}
+#div_novacompra p {
+    margin: 0;
+}
+#txt_saibaquantofica{
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Poppins-bold;
+}
+#botao_novacompra{
+    background-color:#262626;
+    color: #ffffff;
+    font-family: Poppins-Regular;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 320px;
+    margin-top: 15px;
+}
+#botao_novacompra:hover{
+    background-color:#ffffff;
+    color: #14B982;
+    cursor: pointer;
+}
+
+
+#minhascompras{
+    font-family: Poppins-bold;
+    font-size: 18px;
+    margin-top: 15px;
+}
