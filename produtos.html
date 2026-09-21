@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="shortcut icon" href="imagens/logo_cesta.svg" type="image/x-icon">
+    <title>Quanto Fica? - Produtos</title>
+</head>
+<body>
+    <header>
+        <div id="div_header">
+            <div id="icone_inteiro">
+                <div id="fundo_icone">
+                    <img id="logo_cesta" src="imagens/logo_cesta.svg">
+                </div>
+            </div>
+            
+            <p id="quantofica_titulo">Quanto Fica?</p>
+        </div>
+        
+        <nav id="nav_principal">
+            <a class="link_nav ativo" href="index.html">Início</a>
+            <a class="link_nav" href="produtos.html">Produtos</a>
+            <a class="link_nav" href="gastos.html">Gastos</a>
+        </nav>
+    </header>
+
+    <p id="titulo_produtos">Produtos</p>
+    <p id="subtitulo_produtos">Todos os produtos que você já adicionou em suas compras.</p>
+
+    <input id="busca_produto" type="search" placeholder="Buscar produto">
+
+    <div id="container_produtos"></div>
+
+    <script type="module" src="produtos.js"></script>
+</body>
+</html>

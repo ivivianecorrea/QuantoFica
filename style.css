@@ -17,12 +17,13 @@ body{
 header{
     display: flex;
     align-items: center;
-}
-#div_header{
-    display: flex;
+    justify-content: space-between;
     border-style: solid;
     border-color: #d6d6d6;
     border-width: 0px 0px 2px 0px;
+}
+#div_header{
+    display: flex;
     height: 30px;
     width: auto;
     margin: -10px -15px auto -15px ;
@@ -42,7 +43,24 @@ header{
     margin-left: 15px;
     font-family: Poppins-bold;
     font-size: 18px;
+    margin: 7px 0px 0px 10px;
 }
+
+
+
+#nav_principal{
+    font-family: Poppins-bold;
+    font-size: 12px;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    color: #262626;
+    
+}
+#nav_principal:hover{
+    color: #14B982;
+}
+
 
 
 #div_novacompra{

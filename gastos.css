@@ -1,0 +1,533 @@
+[hidden]{
+    display: none !important;
+}
+
+#pagina_gastos{
+    padding-bottom: 30px;
+}
+
+.cartao{
+    background-color: #ffffff;
+    border: 2px solid #d6d6d6;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px #eae9e9;
+    padding: 20px;
+}
+
+.secao_gastos{
+    margin-top: 32px;
+}
+.titulo_secao{
+    font-family: Poppins-bold;
+    font-size: 16px;
+    margin: 0px;
+}
+.subtitulo_secao{
+    font-family: Poppins-Regular;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #6b6b6b;
+    margin: 5px 0px 0px 0px;
+}
+.aviso_gastos{
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    color: #6b6b6b;
+    margin: 15px 0px 0px 0px;
+}
+
+
+
+/* ---------- nenhuma compra ainda ---------- */
+.vazio_gastos{
+    border-style: dashed;
+    text-align: center;
+    margin-top: 25px;
+    padding: 35px 20px;
+}
+.vazio_titulo{
+    font-family: Poppins-bold;
+    font-size: 15px;
+    margin: 0px;
+}
+.vazio_texto{
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    color: #6b6b6b;
+    margin: 8px 0px 0px 0px;
+}
+.botao_vazio{
+    display: inline-block;
+    background-color: #262626;
+    color: #ffffff;
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 18px;
+}
+.botao_vazio:hover{
+    background-color: #14B982;
+}
+
+
+
+/* ---------- destaque do último mês ---------- */
+#hero_gasto{
+    background-color: #14B982;
+    border-radius: 25px;
+    padding: 22px 20px;
+    margin-top: 20px;
+}
+.hero_rotulo{
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    color: #06382f;
+    margin: 0px;
+}
+.hero_valor{
+    font-family: Poppins-bold;
+    font-size: 34px;
+    color: #ffffff;
+    margin: 2px 0px 10px 0px;
+}
+.hero_chip{
+    display: inline-block;
+    background-color: #ffffff;
+    font-family: Poppins-bold;
+    font-size: 11px;
+    border-radius: 20px;
+    padding: 5px 12px;
+}
+.hero_chip.desce{
+    color: #0f8f65;
+}
+.hero_chip.sobe{
+    color: #a32530;
+}
+.hero_frase{
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #06382f;
+    margin: 10px 0px 0px 0px;
+}
+
+
+
+/* ---------- cartões de resumo ---------- */
+#kpis_gastos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+.card_kpi{
+    background-color: #ffffff;
+    border: 2px solid #d6d6d6;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px #eae9e9;
+    padding: 14px 16px;
+}
+.card_kpi.bom{
+    border-color: #14B982;
+    background-color: #f0faf6;
+}
+.card_kpi.ruim{
+    border-color: #a32530;
+    background-color: #ffedef;
+}
+.kpi_rotulo{
+    font-family: Poppins-Regular;
+    font-size: 11px;
+    color: #4a4a4a;
+    margin: 0px;
+}
+.kpi_valor{
+    font-family: Poppins-bold;
+    font-size: 18px;
+    margin: 4px 0px 0px 0px;
+}
+.card_kpi.bom .kpi_valor{
+    color: #0f8f65;
+}
+.card_kpi.ruim .kpi_valor{
+    color: #a32530;
+}
+.kpi_apoio{
+    font-family: Poppins-Regular;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #6b6b6b;
+    margin: 4px 0px 0px 0px;
+}
+@media (min-width: 700px){
+    #kpis_gastos{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+/* ---------- gráfico de colunas ---------- */
+.cartao_grafico{
+    margin-top: 15px;
+}
+.grafico_rolagem{
+    overflow-x: auto;
+    padding-top: 8px;
+}
+.grafico_interno{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 200px;
+    min-width: 100%;
+    width: max-content;
+}
+.coluna_grafico{
+    flex: 1 0 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.valor_coluna{
+    font-family: Poppins-bold;
+    font-size: 10px;
+    line-height: 14px;
+    height: 14px;
+    color: #262626;
+    white-space: nowrap;
+    margin: 0px 0px 4px 0px;
+}
+.barra_coluna{
+    width: 100%;
+    max-width: 44px;
+    background-color: #262626;
+    border-radius: 10px 10px 4px 4px;
+}
+.barra_coluna.barata{
+    background-color: #14B982;
+}
+.barra_coluna.cara{
+    background-color: #a32530;
+}
+.rotulo_coluna{
+    font-family: Poppins-Regular;
+    font-size: 10px;
+    line-height: 24px;
+    height: 24px;
+    color: #4a4a4a;
+    margin: 0px;
+}
+.linha_media{
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 2px dashed #14B982;
+    pointer-events: none;
+}
+.rotulo_media{
+    position: absolute;
+    right: 0;
+    top: -20px;
+    background-color: #ffffff;
+    font-family: Poppins-bold;
+    font-size: 9px;
+    color: #0f8f65;
+    padding: 0px 4px;
+}
+
+#legenda_grafico{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 2px solid #f0f0f0;
+}
+.legenda_item{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: Poppins-Regular;
+    font-size: 10px;
+    color: #4a4a4a;
+}
+.amostra{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+}
+.amostra_barata{
+    background-color: #14B982;
+}
+.amostra_cara{
+    background-color: #a32530;
+}
+.amostra_neutra{
+    background-color: #262626;
+}
+.amostra_media{
+    height: 0px;
+    width: 16px;
+    border-radius: 0px;
+    border-top: 2px dashed #14B982;
+}
+#insight_grafico{
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #262626;
+    margin: 14px 0px 0px 0px;
+}
+
+
+
+/* ---------- mês contra mês e produtos: grade de cartões ---------- */
+#lista_meses,
+#lista_diferencas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+#lista_diferencas .aviso_gastos{
+    grid-column: 1 / -1;
+    margin: 0px;
+}
+
+.cabecalho_mes{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+.titulo_mes_bloco{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 8px;
+}
+.nome_mes{
+    font-family: Poppins-bold;
+    font-size: 15px;
+    margin: 0px;
+}
+.total_mes{
+    font-family: Poppins-bold;
+    font-size: 15px;
+    color: #14B982;
+    margin: 0px;
+    flex-shrink: 0;
+}
+.meta_mes{
+    font-family: Poppins-Regular;
+    font-size: 11px;
+    color: #6b6b6b;
+    margin: 6px 0px 0px 0px;
+}
+
+.selo{
+    font-family: Poppins-bold;
+    font-size: 9px;
+    border-radius: 20px;
+    padding: 3px 8px;
+}
+.selo.verde{
+    background-color: #e3f6ee;
+    color: #0f8f65;
+}
+.selo.vermelho{
+    background-color: #ffe3e6;
+    color: #a32530;
+}
+
+.chip_variacao{
+    display: inline-block;
+    font-family: Poppins-bold;
+    font-size: 10px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-top: 12px;
+}
+.chip_variacao.desce{
+    background-color: #e3f6ee;
+    color: #0f8f65;
+}
+.chip_variacao.sobe{
+    background-color: #ffe3e6;
+    color: #a32530;
+}
+.chip_variacao.igual{
+    background-color: #eeeeee;
+    color: #4a4a4a;
+}
+.detalhe_variacao{
+    font-family: Poppins-Regular;
+    font-size: 10px;
+    color: #6b6b6b;
+    margin: 6px 0px 0px 0px;
+}
+
+/* orçamento */
+.bloco_orcamento{
+    border-top: 2px solid #f0f0f0;
+    margin-top: 14px;
+    padding-top: 12px;
+}
+.linha_orcamento{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: Poppins-Regular;
+    font-size: 10px;
+    color: #4a4a4a;
+    margin-bottom: 6px;
+}
+.orcamento_valores{
+    font-family: Poppins-bold;
+    color: #262626;
+}
+.trilho_orcamento{
+    background-color: #eeeeee;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+.preenchimento_orcamento{
+    height: 100%;
+    border-radius: 10px;
+}
+.preenchimento_orcamento.ok{
+    background-color: #14B982;
+}
+.preenchimento_orcamento.estourou{
+    background-color: #a32530;
+}
+.texto_orcamento{
+    font-family: Poppins-bold;
+    font-size: 11px;
+    margin: 8px 0px 0px 0px;
+}
+.texto_orcamento.desce{
+    color: #0f8f65;
+}
+.texto_orcamento.sobe{
+    color: #a32530;
+}
+.nota_orcamento{
+    font-family: Poppins-Regular;
+    font-size: 9px;
+    color: #8a8a8a;
+    margin: 4px 0px 0px 0px;
+}
+
+
+
+/* ---------- produtos que mudaram de preço ---------- */
+#filtros_produtos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+.filtro_produto{
+    background: none;
+    border: 2px solid #d6d6d6;
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-family: Poppins-bold;
+    font-size: 10px;
+    color: #262626;
+    cursor: pointer;
+}
+.filtro_produto:hover{
+    border-color: #14B982;
+    color: #14B982;
+}
+.filtro_produto.ativo{
+    background-color: #14B982;
+    border-color: #14B982;
+    color: #ffffff;
+}
+.filtro_produto:focus-visible{
+    outline: 2px solid #128F66;
+    outline-offset: 2px;
+}
+
+.card_diferenca .cabecalho_mes{
+    align-items: center;
+}
+.card_diferenca .chip_variacao{
+    margin-top: 0px;
+    flex-shrink: 0;
+}
+
+.grafico_preco{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.eixo_preco{
+    stroke: #e5e5e5;
+    stroke-width: 1;
+}
+.linha_preco_grafico{
+    fill: none;
+    stroke: #262626;
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+.ponto_neutro{
+    fill: #ffffff;
+    stroke: #262626;
+    stroke-width: 2.5;
+}
+.ponto_barato{
+    fill: #14B982;
+    stroke: #ffffff;
+    stroke-width: 2;
+}
+.ponto_caro{
+    fill: #a32530;
+    stroke: #ffffff;
+    stroke-width: 2;
+}
+.rotulo_preco_grafico{
+    font-family: Poppins-bold;
+    font-size: 10px;
+    fill: #262626;
+}
+.rotulo_mes_grafico{
+    font-family: Poppins-Regular;
+    font-size: 9px;
+    fill: #6b6b6b;
+}
+
+.dicas_preco{
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-top: 10px;
+}
+.dicas_preco p{
+    font-family: Poppins-bold;
+    font-size: 11px;
+    margin: 0px;
+}
+.dicas_preco p + p{
+    margin-top: 4px;
+}
+.dica_barata{
+    color: #0f8f65;
+}
+.dica_cara{
+    color: #a32530;
+}
