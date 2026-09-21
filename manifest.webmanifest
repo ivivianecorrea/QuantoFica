@@ -1,0 +1,18 @@
+{
+    "id": "./",
+    "name": "Quanto Fica?",
+    "short_name": "Quanto Fica",
+    "description": "Saiba quanto fica a sua compra antes do caixa.",
+    "lang": "pt-BR",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#14B982",
+    "icons": [
+        { "src": "imagens/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+        { "src": "imagens/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+        { "src": "imagens/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+        { "src": "imagens/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    ]
+}
