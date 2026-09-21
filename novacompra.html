@@ -45,8 +45,18 @@
             <input id="data_compra" class="input" type="date">
             <P class="info_novacompra" >ORÇAMENTO(LIMITE)</P>
             <input id="orçamento_compra" class="input" type="number" placeholder="Opcional">
+            <div id="div_orcamento_padrao">
+                <label class="interruptor">
+                    <input id="orçamento_padrão" type="checkbox">
+                    <span class="trilho"></span>
+                </label>
+                <p id="txt_orcamento_padrao">Definir orçamento padrão (ao adicionar uma nova compra, ela sempre virá com esse valor)</p>
+            </div>
         </div>
 
+        <div id="aviso_orcamento" class="aviso-orcamento">
+            ⚠️ Orçamento ultrapassado em <span id="valor_excedente"></span>
+        </div>
 
         <div id="info_produto">
             <p>PRODUTO</p>

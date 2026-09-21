@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="shortcut icon" href="imagens/logo_cesta.svg" type="image/x-icon">
+    <title>Quanto Fica? - Gastos</title>
+</head>
+<body>
+    <header>
+        <div id="div_header">
+            <div id="icone_inteiro">
+                <div id="fundo_icone">
+                    <img id="logo_cesta" src="imagens/logo_cesta.svg">
+                </div>
+            </div>
+            
+            <p id="quantofica_titulo">Quanto Fica?</p>
+        </div>
+        
+        <nav id="nav_principal">
+            <a class="link_nav ativo" href="index.html">Início</a>
+            <a class="link_nav" href="produtos.html">Produtos</a>
+            <a class="link_nav" href="gastos.html">Gastos</a>
+        </nav>
+    </header>
+
+    <main id="pagina_gastos">
+        <p id="titulo_produtos">Gastos</p>
+        <p id="subtitulo_produtos">Veja quanto você gasta por mês, compare os meses e descubra onde os preços mudaram.</p>
+ 
+        <!-- aparece quando ainda não existe nenhuma compra -->
+        <section id="sec_vazio" class="cartao vazio_gastos" hidden>
+            <p class="vazio_titulo">Ainda não há gastos para mostrar</p>
+            <p class="vazio_texto">Quando você finalizar suas compras, os gráficos e resumos aparecem aqui.</p>
+            <a class="botao_vazio" href="index.html">Ir para o início</a>
+        </section>
+ 
+        <!-- tudo abaixo é preenchido pelo gastos.js -->
+        <div id="conteudo_gastos" hidden>
+ 
+            <section id="hero_gasto"></section>
+ 
+            <section id="kpis_gastos"></section>
+ 
+            <section class="secao_gastos">
+                <h2 class="titulo_secao">Quanto você gastou por mês</h2>
+                <p class="subtitulo_secao">Cada coluna é um mês. Quanto mais alta, mais você gastou. A linha tracejada é a sua média.</p>
+ 
+                <div class="cartao cartao_grafico">
+                    <div id="grafico_meses"></div>
+                    <div id="legenda_grafico">
+                        <span class="legenda_item"><span class="amostra amostra_barata"></span>Mês mais barato</span>
+                        <span class="legenda_item"><span class="amostra amostra_cara"></span>Mês mais caro</span>
+                        <span class="legenda_item"><span class="amostra amostra_neutra"></span>Demais meses</span>
+                        <span class="legenda_item"><span class="amostra amostra_media"></span>Média</span>
+                    </div>
+                    <p id="insight_grafico"></p>
+                </div>
+            </section>
+ 
+            <section class="secao_gastos">
+                <h2 class="titulo_secao">Mês contra mês</h2>
+                <p class="subtitulo_secao">Cada mês comparado com o mês anterior em que você fez compras. Verde é bom: você gastou menos.</p>
+                <div id="lista_meses"></div>
+            </section>
+ 
+            <section class="secao_gastos">
+                <h2 class="titulo_secao">Produtos que mudaram de preço</h2>
+                <p class="subtitulo_secao">Comparamos o preço médio do produto no primeiro mês em que você o comprou com o do último mês. Só aparecem produtos comprados em 2 meses ou mais.</p>
+                <div id="filtros_produtos"></div>
+                <div id="lista_diferencas"></div>
+            </section>
+ 
+        </div>
+    </main>
+</body>
+</html>

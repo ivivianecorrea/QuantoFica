@@ -102,6 +102,84 @@ header{
 #data_compra{
     width: 100px;
 }
+
+
+#div_orcamento_padrao{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+#txt_orcamento_padrao{
+    font-family: Poppins-Bold;
+    font-size: 12px;
+}
+.interruptor{
+    position: relative;
+    flex-shrink: 0;
+    width: 40px;
+    height: 22px;
+    cursor: pointer;
+}
+.interruptor input{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+.trilho{
+    position: absolute;
+    inset: 0;
+    background-color: #d6d6d6;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+    pointer-events: none;
+}
+.trilho::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+.interruptor input:checked + .trilho{
+    background-color: #14B982;
+}
+.interruptor input:checked + .trilho::before{
+    transform: translateX(18px);
+}
+.interruptor input:focus-visible + .trilho{
+    outline: 2px solid #128F66;
+    outline-offset: 2px;
+}
+
+
+
+.aviso-orcamento{
+    display: none;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff3cd;
+    border: 2px solid #e6b800;
+    color: #7a5c00;
+    padding: 12px 15px;
+    border-radius: 15px;
+    font-family: Poppins-bold;
+    font-size: 11px;
+    margin-top: 15px;
+}
+.aviso-orcamento.visivel{
+    display: flex;
+}
+
+
+
 #info_produto{
     border-style: solid;
     border-radius: 20px;
@@ -146,6 +224,39 @@ header{
     font-family: Poppins-bold;
     font-size: 18px;
     margin: 30px 0px 0px 0px;
+}
+
+
+
+.controle_qtd{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+.btn_qtd{
+    background-color: #262626;
+    color: #ffffff;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    font-family: Poppins-bold;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+}
+.btn_qtd:hover{
+    background-color: #14B982;
+}
+.input_qtd{
+    width: 45px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    font-family: Poppins-Regular;
+    font-size: 12px;
 }
 
 
@@ -211,4 +322,120 @@ header{
 .infoproduto{
     margin: 0px;
     font-family: Poppins-Regular;
+}
+
+
+.cabecalho_produto_lista{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.btn_editar_produto{
+    background: none;
+    border: 2px solid #14B982;
+    color: #14B982;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-family: Poppins-bold;
+    font-size: 10px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.btn_editar_produto:hover{
+    background-color: #14B982;
+    color: #ffffff;
+}
+
+.form_editar_produto{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.botoes_editar_produto{
+    display: flex;
+    gap: 10px;
+}
+.btn_salvar_produto{
+    background-color: #14B982;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-family: Poppins-bold;
+    font-size: 11px;
+    cursor: pointer;
+}
+.btn_salvar_produto:hover{
+    background-color: #128F66;
+}
+.btn_cancelar_produto{
+    background: none;
+    border: 2px solid #d6d6d6;
+    color: #262626;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-family: Poppins-bold;
+    font-size: 11px;
+    cursor: pointer;
+}
+.btn_cancelar_produto:hover{
+    border-color: #a32530;
+    color: #a32530;
+}
+
+
+
+/* sugestões de nome e preço ao adicionar produto */
+.campo_sugestao{
+    position: relative;
+}
+.campo_sugestao .input{
+    width: 100%;
+    box-sizing: border-box;
+}
+.lista_sugestoes{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 2px solid #d6d6d6;
+    border-radius: 12px;
+    box-shadow: 3px 3px 3px #eae9e9;
+    margin-top: 4px;
+    padding: 4px;
+}
+.lista_sugestoes.oculto{
+    display: none;
+}
+.item_sugestao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    color: #262626;
+    cursor: pointer;
+}
+.item_sugestao:hover,
+.item_sugestao:focus-visible{
+    background-color: #f2f2f2;
+    color: #14B982;
+    outline: none;
+}
+.detalhe_sugestao{
+    font-family: Poppins-bold;
+    font-size: 11px;
+    color: #6b6b6b;
 }
