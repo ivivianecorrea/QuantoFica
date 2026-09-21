@@ -91,3 +91,40 @@ header{
     font-size: 18px;
     margin-top: 15px;
 }
+
+
+
+.resumo-compra{
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #d6d6d6;
+    border-width: 2px;
+    box-shadow: 3px 3px 3px #eae9e9;
+    padding: 25px;
+}
+.nomeEl{
+    font-family: Poppins-bold;
+    font-size: 18px;
+    margin: -5px 0px 0px 0px;
+}
+.dataEl{
+    font-family: Poppins-bold;
+    font-size: 10px;
+    display: flex;
+    margin: 5px 0px 0px 0px;
+}
+.totalEl{
+    font-family: Poppins-bold;
+    font-size: 18px;
+    margin: -45px 0px 0px 0px;
+    display: flex;
+    justify-content: end;
+    color: #14B982;
+}
+.qtdEl{
+    font-family: Poppins-bold;
+    font-size: 12px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: end;
+}
