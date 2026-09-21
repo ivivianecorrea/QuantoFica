@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel=”shortcut icon” href="imagens/logo_cesta.svg" type=”image/x-icon”>
     <title>Quanto Fica?</title>
 </head>
 <body>
@@ -17,6 +18,8 @@
         <p id="quantofica_titulo">Quanto Fica?</p>
     </header>
 
+
+
     <div id="div_novacompra">
         <p>SEU CARRINHO, SEM SURPRESAS</p>
         <P id="txt_saibaquantofica">Saiba quanto fica antes do caixa.</P>
@@ -24,10 +27,44 @@
         <input id="botao_novacompra" type="button" value="+ Nova Compra" >
     </div>
 
+
+
     <div>
-        <p id="minhascompras">Minhas Compras</p>
+        <div id="header_minhascompras">
+            <p id="minhascompras">Minhas Compras</p>
+            <div id="header_direita_minhascompras">
+                <button id="icon_ordem">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.78871 8.25295e-07H3.85914V14H0L4.82393 20L9.64785 14H5.78871V8.25295e-07ZM18.3309 11H11.5774V13H16.8259L11.9247 17.23C11.7028 17.42 11.5774 17.7 11.5774 18V19C11.5774 19.55 12.0116 20 12.5422 20H19.2957V18H14.0473L18.9484 13.77C19.1703 13.58 19.2957 13.3 19.2957 13V12C19.2957 11.45 18.8616 11 18.3309 11ZM15.7067 8.25295e-07H15.1664C14.3367 8.25295e-07 13.6035 0.550001 13.3333 1.37L10.8828 9H12.9185L13.5649 7H17.3179L17.9643 9H20L17.5494 1.37C17.4216 0.970891 17.1757 0.623688 16.8466 0.377741C16.5176 0.131795 16.1221 -0.000381085 15.7164 8.25295e-07H15.7067ZM14.2016 5L15.1664 2H15.7067L16.6715 5H14.2016Z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button id="icon_lixeira" >
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 4V2C15 0.9 14.1 0 13 0H7C5.9 0 5 0.9 5 2V4H0V6H2V18C2 19.1 2.9 20 4 20H16C17.1 20 18 19.1 18 18V6H20V4H15ZM13 4H7V2H13V4Z" fill="currentColor"/>
+                    </svg>
+                </button>
+                
+            </div>
+        </div>
+
+    <input id="botao_apagar_selecionadas" type="button" value="Apagar selecionadas">
+    
+        <div id="menu_ordem">
+            <button class="opcao_ordem" data-ordem="nome-asc">Nome (A → Z)</button>
+            <button class="opcao_ordem" data-ordem="nome-desc">Nome (Z → A)</button>
+            <button class="opcao_ordem" data-ordem="data-desc">Data (mais recente)</button>
+            <button class="opcao_ordem" data-ordem="data-asc">Data (mais antiga)</button>
+            <button class="opcao_ordem" data-ordem="preco-desc">Preço (maior → menor)</button>
+            <button class="opcao_ordem" data-ordem="preco-asc">Preço (menor → maior)</button>
+            <button class="opcao_ordem" data-ordem="itens-desc">Itens (mais → menos)</button>
+            <button class="opcao_ordem" data-ordem="itens-asc">Itens (menos → mais)</button>
+        </div>
+
         <div id="container_compras"></div>
     </div>
+
+
+
 <script src="script.js"></script>
 </body>
 </html>
