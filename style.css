@@ -49,6 +49,7 @@ header{
 
 
 #nav_principal{
+    text-decoration: none;
     font-family: Poppins-bold;
     font-size: 12px;
     display: flex;
